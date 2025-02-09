@@ -36,6 +36,12 @@ public class ContaCorrente
 
     public void ConcederCredito(decimal valor)
     {
+        if (valor <= 0)
+        {
+            Console.WriteLine("O valor do crédito deve ser positivo.");
+            return;
+        }
+
         if (Ativa)
         {
             Saldo += valor;
@@ -49,6 +55,12 @@ public class ContaCorrente
 
     public void Debitar(decimal valor)
     {
+        if (valor <= 0)
+        {
+            Console.WriteLine("O valor do débito deve ser positivo.");
+            return;
+        }
+
         if (Ativa && Saldo >= valor)
         {
             Saldo -= valor;
@@ -62,6 +74,12 @@ public class ContaCorrente
 
     public void Transferir(ContaCorrente contaDestino, decimal valor)
     {
+        if (valor <= 0)
+        {
+            Console.WriteLine("O valor da transferência deve ser positivo.");
+            return;
+        }
+
         if (Ativa && Saldo >= valor)
         {
             Saldo -= valor;
@@ -81,6 +99,12 @@ public class ContaCorrente
 
     public decimal CalcularJuros(decimal taxa)
     {
+        if (taxa < 0)
+        {
+            Console.WriteLine("A taxa de juros deve ser não negativa.");
+            return 0;
+        }
+
         if (Ativa)
         {
             decimal juros = Saldo * taxa;

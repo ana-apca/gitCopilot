@@ -55,6 +55,19 @@ public class ContaCorrenteTests
     }
 
     /// <summary>
+    /// Tests the Debitar method to ensure it does not decrease the balance when the debit value is negative.
+    /// </summary>
+    [Fact]
+    public void Debitar_NaoDeveDiminuirSaldo_QuandoValorNegativo()
+    {
+        var conta = new ContaCorrente(12345, "João Silva");
+        conta.AbrirConta();
+        conta.ConcederCredito(1000);
+        conta.Debitar(-200);
+        Assert.Equal(1000, conta.Saldo);
+    }
+
+    /// <summary>
     /// Tests the Transferir method to ensure it transfers the amount to another account when the account is active and has sufficient balance.
     /// </summary>
     [Fact]
@@ -68,6 +81,22 @@ public class ContaCorrenteTests
         contaOrigem.Transferir(contaDestino, 500);
         Assert.Equal(500, contaOrigem.Saldo);
         Assert.Equal(500, contaDestino.Saldo);
+    }
+
+    /// <summary>
+    /// Tests the Transferir method to ensure it does not transfer the amount to another account when the transfer value is negative.
+    /// </summary>
+    [Fact]
+    public void Transferir_NaoDeveTransferirValorParaOutraConta_QuandoValorNegativo()
+    {
+        var contaOrigem = new ContaCorrente(12345, "João Silva");
+        var contaDestino = new ContaCorrente(67890, "Maria Souza");
+        contaOrigem.AbrirConta();
+        contaDestino.AbrirConta();
+        contaOrigem.ConcederCredito(1000);
+        contaOrigem.Transferir(contaDestino, -500);
+        Assert.Equal(1000, contaOrigem.Saldo);
+        Assert.Equal(0, contaDestino.Saldo);
     }
 
     /// <summary>
