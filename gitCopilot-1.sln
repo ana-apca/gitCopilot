@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APLM3", "APLM3", "{B58CDCD5-8CA5-AE4B-B202-A8163EBAC13B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APL2007M3", "APLM3\APL2007M3\APL2007M3.csproj", "{115593DF-CE91-A07C-09BF-F7C8EAD8F50A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{115593DF-CE91-A07C-09BF-F7C8EAD8F50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{115593DF-CE91-A07C-09BF-F7C8EAD8F50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{115593DF-CE91-A07C-09BF-F7C8EAD8F50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{115593DF-CE91-A07C-09BF-F7C8EAD8F50A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{115593DF-CE91-A07C-09BF-F7C8EAD8F50A} = {B58CDCD5-8CA5-AE4B-B202-A8163EBAC13B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A099F1A3-4739-4174-B57E-35C86AF7CA0B}
+	EndGlobalSection
+EndGlobal
