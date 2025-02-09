@@ -78,6 +78,48 @@ Before you open up a codespace on a repository, you can create a development con
 
 **Wait about 60 seconds then refresh your repository landing page for the next step.**
 
+# Prime Number Checker
+
+## Overview
+
+This project contains a simple application to identify prime numbers within a given range and a set of unit tests to verify its functionality.
+
+## Project Structure
+
+- `eventone`: Contains the main application code.
+  - `PrimeNumberChecker.cs`: Defines the `PrimeNumberChecker` class, which includes methods to identify prime numbers.
+- `test`: Contains the unit tests for the application.
+  - `PrimeNumberCheckerTests.cs`: Defines the `PrimeNumberCheckerTests` class, which includes tests for the `PrimeNumberChecker` class.
+
+## PrimeNumberChecker Class
+
+The `PrimeNumberChecker` class provides functionality to identify prime numbers. It includes the following methods:
+
+- `IdentifyPrimes()`: Identifies and prints prime numbers between 1 and 100.
+- `IsPrime(int number)`: Determines if a given number is prime.
+
+## PrimeNumberCheckerTests Class
+
+The `PrimeNumberCheckerTests` class contains unit tests for the `PrimeNumberChecker` class. It uses the [Xunit](https://xunit.net/) framework for testing. The tests include:
+
+- `TestIdentifyPrimes()`: Tests the `IdentifyPrimes` method.
+- `TestIsPrime(int number, bool expected)`: Tests the `IsPrime` method with various inputs.
+
+## How to Run
+
+1. Clone the repository.
+2. Open the solution in your preferred IDE.
+3. Run the tests using the test runner in your IDE or via the command line.
+
+## Dependencies
+
+- .NET Core SDK
+- Xunit
+
+## License
+
+This project is licensed under the MIT License.
+
 <footer>
 
 <!--
@@ -92,3 +134,4 @@ Get help: [Post in our discussion board](https://github.com/orgs/skills/discussi
 &copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
 </footer>
+````
